@@ -1,0 +1,20 @@
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1570385404967-fe4e1b48454b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fG1vdmllfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);">
+  <div class="container">
+    <h1>Discover all <strong>the movies</strong></h1>
+    <p>Choose your movie and put it on your fav' list!</p>
+  </div>
+</div>
+<div style="display:flex; justify-content:space-around; margin-top:30px;">
+<%@movies.each do |movie|%>
+  <div class="card card-list" style="width: 18rem">
+    <img src="<%=movie.poster_url%>" class="miniature-list-img">
+    <div class="card-body">
+      <h5 class="card-title"><%=movie.title%></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%=movie.rating%></h6>
+      <p class="card-text"><%=movie.overview%></p>
+      <a href="#" class="card-link">Learn more</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  <%end%>
+  </div>

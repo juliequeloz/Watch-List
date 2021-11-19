@@ -1,0 +1,11 @@
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1570385404967-fe4e1b48454b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fG1vdmllfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);">
+  <div class="container">
+    <h1><%=@list.name%></h1>
+    <p>Watch all the movies in <%=@list.name%> category!</p>
+  </div>
+</div>
+<%@bookmarks.each do |bookmark|%>
+<p><%=bookmark.comment%></p>
+<%end%>
+
+<p class="add-btn"><%=link_to "Add a new bookmark for your list",  new_list_bookmark_path(@list)%></p>
